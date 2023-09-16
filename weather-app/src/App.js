@@ -49,12 +49,57 @@ function App() {
               ></input>
             </div>
             <div className="body-form__box2">
-              <button type="submit">Get Forecast</button>
+              <button className="submit-button" type="submit">
+                Get Forecast
+              </button>
             </div>
           </form>
         </div>
-        <div>
-          {weatherData?.locations["Washington,DC,USA"]?.currentConditions?.temp}
+        <div className="">
+          <div>
+            <h2> Weather Information </h2>
+            <p>
+              {" "}
+              Location: {
+                weatherData?.locations["Washington,DC,USA"]?.address
+              },{" "}
+            </p>
+            <p>
+              {" "}
+              Current Temperature:{" "}
+              {
+                weatherData?.locations["Washington,DC,USA"]?.currentConditions
+                  ?.temp
+              }
+              , °F
+            </p>
+            {/* <p>
+              {" "}
+              Weather Description:{" "}
+              {weatherData?.locations?.currentConditions?.description}
+            </p> */}
+            <h3>Hourly Forecast</h3>
+            <p>
+              {" "}
+              Date and Time:{" "}
+              {
+                weatherData?.locations["Washington,DC,USA"]?.currentConditions
+                  ?.datetime
+              }
+            </p>
+            {/* <ul>
+              {weatherData &&
+                weatherData.hours.map((hour) => (
+                  <li key={hour.datetime}>
+                    {hour.datetime}:{hour.temp}°F, {hour.description}
+                  </li>
+                ))}
+            </ul> */}
+            {/* {
+              weatherData?.locations["Washington,DC,USA"]?.currentConditions
+                ?.temp
+            } */}
+          </div>
         </div>
       </div>
     </div>
