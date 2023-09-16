@@ -1,0 +1,37 @@
+.app-header__img {
+  width: 6rem;
+  height: 6rem;
+}
+
+.app-header,
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 1.5rem;
+}
+
+.app-header,
+.body {
+  background-image: linear-gradient(
+    to right top,
+    #99acaf,
+    #8abbc1,
+    #75cad1,
+    #57dadf,
+    #12e9eb
+  );
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.body-title,
+.body-field {
+  padding: 0.5rem;
+}
+
+.body-form__box1,
+.body-form__box2 {
+  padding: 1rem;
+}
